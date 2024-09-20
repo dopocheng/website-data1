@@ -49,7 +49,7 @@
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
 import json from '../assets/json/json.json'
-import cs from '../assets/json/cs.json'
+// import cs from '../assets/json/cs.json'
 import ip from '../assets/json/ip.json'
 import indexDB from '../assets/api/indexDB.js'
 
@@ -68,41 +68,8 @@ let currentPage = ref(1)//当前页
 let pageSize = ref(20)//每页数量
 onMounted(() => {
   console.log(ip)
-  // const updatedData = {
-  //   name: 'Updated Name',
-  //   age: 300
-  // };  // 不包含 'id' 字段
-  // indexDB.addData(updatedData).then(() => {
-  //   console.log(`数据已添加！`);
-  // }).catch(error => {
-  //   console.error('Error adding data:', error);
-  // });
-
-  // updateById(2)
-  // getId(2)
-  // loadIds()
 })
 
-const updateById = (updatedData) => {// 替换指定 id 的数据
-  indexDB.updateDataById(updatedData).then(() => {
-    console.log(` 数据已更新！`);
-  });
-};
-
-const getId = (id) => {
-  // 从数据库获取数据
-  indexDB.getData(id).then((data) => {
-    console.log(`${id}-的数据:`, data);
-  });
-}
-// 获取所有 id
-const loadIds = () => {
-  indexDB.getAllIds().then((allIds) => {
-    ids.value = allIds;
-    getId(ids.value.length)
-    console.log('All IDs:', allIds);
-  });
-};
 // 清除所有数据
 const clearAll = () => {
   indexDB.clearAllData().then(() => {
@@ -191,8 +158,6 @@ function rowClick(row) {
     }).catch(error => {
       console.error('Error adding data:', error);
     });
-    // updateById(2)  
-    // loadIds()
     // localStorage.setItem('myRow', JSON.stringify(row));
     window.open('/about', '_blank');
   } catch (e) {
@@ -202,10 +167,6 @@ function rowClick(row) {
       // Implement fallback logic here
     }
   }
-
-  // console.log('77', row)
-  // localStorage.setItem('myRow', JSON.stringify(row));
-  // window.open('/about', '_blank');
 }
 function collect() {
   console.log('采集---', selectValue.value)
@@ -239,9 +200,6 @@ function handleChange(value) {
   disdatepick.value = true
 
   console.log('选择---', value)
-}
-function exportData() {
-  console.log('数据导出---')
 }
 </script>
 

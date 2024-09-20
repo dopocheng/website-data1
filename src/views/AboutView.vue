@@ -74,18 +74,17 @@ let mediaList = []
 let rowData = ref({})
 onMounted(() => {
   // rowData.value = JSON.parse(localStorage.getItem('myRow'));
-  // console.log('777', rowData.value.content)
   getId()
 })
 const getId = async () => {
   const videoElement = document.getElementById('videoPlayer');
-  let idLeng = await indexDB.getAllIds().then((allIds) => {
+  let id1 = await indexDB.getAllIds().then((allIds) => {
     // console.log('All IDs:', allIds);
     return allIds[allIds.length - 1];
   });
   // 从数据库获取数据
-  indexDB.getData(idLeng).then((data) => {
-    console.log(`${idLeng}-的数据:`, data);
+  indexDB.getData(id1).then((data) => {
+    console.log(`${id1}-的数据:`, data);
     let { title, author, authorUrl, content, imageUrl, publishDate, url } = data;
     rowData.value = { title, author, authorUrl, content, imageUrl, publishDate, url }
     // rowData.value = data//直接赋值页面奔溃
@@ -93,12 +92,6 @@ const getId = async () => {
     videoElement.style.display = 'block'; // 显示视频
   });
 }
-const loadIds = () => {
-  indexDB.getAllIds().then((allIds) => {
-    console.log('All IDs:', allIds);
-    return allIds.length;
-  });
-};
 
 function safeParseJSON(str) {//判断是字符串还是json串
   try {

@@ -128,3 +128,9 @@ rowData.value = { title, author, authorUrl, content, imageUrl, publishDate, url 
 mediaList = data.medias//非响应
 videoElement.style.display = 'block'; // 显示视频
 });
+
+# 结构化和非结构化数据类型之间的区别
+
+![alt text](1726818476933.jpg)
+非结构化数据 数据库：MongoDB、Cassandra、Redis、CouchDB、HBase、Neo4j、Amazon DynamoDB、Elasticsearch、Riak
+非结构化数据 服务器：Minio是一个非常适合存放非结构化数据的工具,非常适合于存储大容量的非结构化数据，如图片、视频、日志文件、备份数据和容器/虚拟机镜像等。Minio支持的对象文件大小可以从几kb到最大5T不等，这使得它能够满足各种规模的数据存储需求。Minio的服务器足够轻量，可以很容易地与其他应用程序结合使用，类似于NodeJS、Redis或MySQL。
