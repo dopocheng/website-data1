@@ -1,0 +1,18 @@
+[
+    {
+        "value": "http://192.168.43.220:8081/task?sitename=凤凰军事&task=台海&tasktype=3&datasource=1",
+        "label": "凤凰军事"
+    },
+    {
+        "value": "http://192.168.43.220:8081/task?sitename=人民网&task=台湾&tasktype=3&datasource=1",
+        "label": "人民网"
+    },
+    {
+        "value": "http://192.168.43.220:8081/task?sitename=VOA中文&task=https://www.voachinese.com/z/2371&tasktype=2&datasource=1",
+        "label": "VOA中文"
+    },
+    {
+        "value": "http://192.168.43.220:8081/task?sitename=BBC中文&task=https://www.bbc.com/zhongwen/simp/topics/cxe2wdp384wt&tasktype=2&datasource=1",
+        "label": "BBC中文"
+    }
+]

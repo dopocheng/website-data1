@@ -1,0 +1,50 @@
+/* src/assets/styles/global.css */
+
+/* 引入 normalize.css */
+/* @import "~normalize.css"; */
+
+/* 你自己的全局样式 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  /* font-family: Arial, sans-serif; */
+  /* line-height: 1.6; */
+  background-color: #f0f0f0;
+  color: #333;
+  scroll-behavior: smooth;
+  font-size: 43px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+html {
+  font-family:
+    miui,
+    PingFangSC-Regular,
+    Pingfang SC,
+    Hiragino Sans GB,
+    Noto Sans,
+    Microsoft YaHei;
+  font-size: 43px; /* 全局根元素字体大小 */
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}

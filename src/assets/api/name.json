@@ -1,0 +1,31 @@
+name
+: "myLargeDatabase"
+objectStoreNames
+: 
+DOMStringList
+0
+: "myDataStore"
+length
+: 1
+[
+    [Prototype
+    ]
+]
+: 
+DOMStringList
+onabort
+: null
+onclose
+: null
+onerror
+: null
+onversionchange
+: null
+version
+: 2
+[
+    [Prototype
+    ]
+]
+: 
+IDBDatabase
